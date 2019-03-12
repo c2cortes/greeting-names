@@ -7,10 +7,14 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import App from '../src/App';
+import App from '../App';
+import NamesList from '../namesList';
+import DropDownLanguages from '../dropDownLanguages';
 
 describe('Unit Test For App Component', () => {
-  it('renders without crashing ###', () => {
+  it('Render main components', () => {
     const wrapper = shallow(<App />);
+    expect(wrapper.find(NamesList)).toHaveLength(1);
+    expect(wrapper.find(DropDownLanguages)).toHaveLength(1);
   });
 }) 

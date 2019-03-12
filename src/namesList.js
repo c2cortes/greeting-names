@@ -16,7 +16,7 @@ export default class NamesList extends Component {
     render() {
       return (
         <div className="App">
-            <textarea value={ this.state.inputTextValue } rows="8" cols="50" className="content-names" onChange={ (e) => this.props.changeInputTextValue(e) }></textarea>
+            <textarea value={ this.state.inputTextValue } rows="8" cols="50" className="content-names" onChange={ (e) => this.props.changeInputTextValue(e) } placeholder='Insert a name by line'></textarea>
         </div>
       );
     }
