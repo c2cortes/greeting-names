@@ -9,7 +9,7 @@ export default class DropDownLanguages extends Component {
 
     render() {
       return (
-        <select onChange={(e) => e.target.value != 0 ? this.props.changeLanguage(e) : null }>
+        <select onChange={(e) => e.target.value !== 0 ? this.props.changeLanguage(e) : null }>
           <option className='language-item' value='0'>Select a language</option>
           { languages.map((item) => this.renderLanguageOption(item)) }
         </select>

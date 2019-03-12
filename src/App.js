@@ -15,7 +15,7 @@ class App extends Component {
     const currentInputTextValue = this.state.inputTextValue.split(/\n/);
 
     for(let i in currentInputTextValue){
-      currentInputTextValue[i] = currentInputTextValue[i].split(' ').length == 2 ? (e.target.value + ' ' + currentInputTextValue[i].split(' ')[1]) : (e.target.value + ' ' + currentInputTextValue[i])
+      currentInputTextValue[i] = currentInputTextValue[i].split(' ').length === 2 ? (e.target.value + ' ' + currentInputTextValue[i].split(' ')[1]) : (e.target.value + ' ' + currentInputTextValue[i])
     }
 
     this.setState({ inputTextValue: currentInputTextValue.join('\n') })
